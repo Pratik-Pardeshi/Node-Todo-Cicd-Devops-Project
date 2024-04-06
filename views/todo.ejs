@@ -91,7 +91,7 @@
 
         /* Additional styling for the footer */
         #footer {
-            background-color: ;
+            background-color: #4CAF50; /* Same color as h1 */
             color: white;
             text-align: center;
             padding: 20px;
@@ -105,12 +105,22 @@
             background-color: #4CAF50; /* Same color as h1 */
             padding: 20px;
             margin-top: 20px;
-            color: white; /* Text color */
+            color: black; /* Text color */
+        }
+
+        .social-icons {
+            margin-top: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-right: 10px;
         }
 
         .social-icons a {
-            color: white;
-            margin-right: 10px;
+            color: black;
             font-size: 20px;
         }
     </style>
@@ -134,15 +144,15 @@
     
     <footer id="footer">
         <div class="container-fluid">
-          <h1>For Contact Me</h1>
+          <h1>Contact Me</h1>
             <!-- social media icons -->
-            <div class="social-icons mt-4">
-                <a href="https://www.linkedin.com/in/pratik-pardeshi-424288272/?originalSubdomain=in" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Pratik-Pardeshi" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/pratik_pardeshi02?igsh=MWw1bWthbWVzOWNrZQ==" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://codepen.io/Pratik-2002" target="_blank"><i class="fab fa-codepen"></i></a>
-                <a href="https://www.facebook.com/pratik.pardeshi.9465?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
-            </div>
+            <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/in/pratik-pardeshi-424288272/?originalSubdomain=in" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/Pratik-Pardeshi" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/pratik_pardeshi02?igsh=MWw1bWthbWVzOWNrZQ==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://codepen.io/Pratik-2002" target="_blank"><i class="fab fa-codepen"></i></a></li>
+                <li><a href="https://www.facebook.com/pratik.pardeshi.9465?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            </ul>
         </div>
     </footer>
 </body>
