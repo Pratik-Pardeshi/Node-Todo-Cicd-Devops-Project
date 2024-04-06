@@ -1,139 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Pratik Todo List APP test</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Include Font Awesome CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+    <head>
+        <title>Pratik Todo List APP test</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
 
-        h1 {
-            background-color: #4CAF50;
-            color: white;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
+            h1 {
+                background-color: #4CAF50;
+                color: white;
+                margin: 0;
+                padding: 20px;
+                text-align: center;
+            }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+            ul {
+                list-style: none;
+                padding: 0;
+            }
 
-        ul li {
-            background: #fff;
-            border: 1px solid #ddd;
-            margin-bottom: 10px;
-            padding: 10px;
-            position: relative;
-        }
+            ul li {
+                background: #fff;
+                border: 1px solid #ddd;
+                margin-bottom: 10px;
+                padding: 10px;
+                position: relative;
+            }
 
-        ul li a {
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-        }
+            ul li a {
+                color: #333;
+                text-decoration: none;
+                font-weight: bold;
+            }
 
-        ul li a:hover {
-            color: #4CAF50;
-        }
+            ul li a:hover {
+                color: #4CAF50;
+            }
 
-        .delete-btn {
-            color: red;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-        }
+            .delete-btn {
+                color: red;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
 
-        .edit-btn {
-            color: #FFC107;
-            position: absolute;
-            right: 40px;
-            top: 10px;
-        }
+            .edit-btn {
+                color: #FFC107;
+                position: absolute;
+                right: 40px;
+                top: 10px;
+            }
 
-        form {
-            background: #fff;
-            padding: 20px;
-            margin-top: 20px;
-        }
+            form {
+                background: #fff;
+                padding: 20px;
+                margin-top: 20px;
+            }
 
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
 
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-        }
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ddd;
+            }
 
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
 
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
 
-        /* Footer styling */
-        #footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-        }
+    <body>
+        <h1>Todo List - Made By Pratik Pardeshi</h1>
+        <ul>
+            <% todolist.forEach(function(todo, index) { %>
+            <li>
+                <a href="/todo/delete/<%= index %>" class="delete-btn">✘</a>
+                <a href="/todo/<%= index %>" class="edit-btn">✎</a>
+                <%- todo %>
+            </li>
+            <% }); %>
+        </ul>
 
-        .social-icons a {
-            color: white;
-            margin-right: 10px;
-            font-size: 20px;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Todo List - Made By Pratik Pardeshi</h1>
-    <ul>
-        <!-- Todo list items -->
-    </ul>
-
-    <form action="/todo/add/" method="post">
-        <p>
-            <label for="newtodo">Write the items that you want to add to your To-Do List?</label>
-            <input type="text" name="newtodo" id="newtodo" autofocus />
-            <input type="submit" value="Add" />
-        </p>
-    </form>
-
-    <footer id="footer">
-        <div class="container-fluid">
-            <div class="social-icons mt-4">
-                <a href="https://www.linkedin.com/in/pratik-pardeshi-424288272/?originalSubdomain=in" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Pratik-Pardeshi" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/pratik_pardeshi02?igsh=MWw1bWthbWVzOWNrZQ==" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://codepen.io/Pratik-2002" target="_blank"><i class="fab fa-codepen"></i></a>
-                <a href="https://www.facebook.com/pratik.pardeshi.9465?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook"></i></a>
-            </div>
-            <p>Contact Me:</p>
-            <p>Email: pspardeshi2002@gmail.com</p>
-            <p>Phone: +91 9763168031</p>
-        </div>
-    </footer>
-</body>
+        <form action="/todo/add/" method="post">
+            <p>
+                <label for="newtodo">Write the items that you want to add to your To-Do List?</label>
+                <input type="text" name="newtodo" id="newtodo" autofocus />
+                <input type="submit" value="Add" />
+            </p>
+        </form>
+    </body>
 </html>
